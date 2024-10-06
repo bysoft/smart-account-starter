@@ -18,20 +18,13 @@ export const viewport = {
   initialScale: 1.0,
 };
 
-export const metadata: Metadata = {
-  title: 'Onchain App Template',
-  description: 'Built with OnchainKit',
-  openGraph: {
-    title: 'Onchain App Template',
-    description: 'Built with OnchainKit',
-    images: [`${NEXT_PUBLIC_URL}/vibes/vibes-19.png`],
-  },
-};
 
-export default function RootLayout({
+export default function OnchainKitLayout({
   children,
 }: { children: React.ReactNode }) {
   return (
-        <OnchainProviders>{children}</OnchainProviders>
+    <OnchainProviders>
+      {children}
+    </OnchainProviders>
   );
 }

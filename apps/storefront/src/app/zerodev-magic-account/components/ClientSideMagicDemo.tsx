@@ -1,6 +1,5 @@
 "use client"
 
-import { StrictMode } from "react"
 import dynamic from 'next/dynamic'
 import "../index.css"
 import "../polyfills.ts"
@@ -11,10 +10,8 @@ const DynamicProviders = dynamic(() => import('../Providers.tsx'), { ssr: false 
 
 export default function ClientSideMagicDemo() {
   return (
-    <StrictMode>
-      <DynamicProviders>
-        <DynamicApp />
-      </DynamicProviders>
-    </StrictMode>
+    <DynamicProviders>
+      <DynamicApp />
+    </DynamicProviders>
   )
 }

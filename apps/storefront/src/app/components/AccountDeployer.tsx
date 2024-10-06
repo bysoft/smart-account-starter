@@ -15,6 +15,10 @@ import Highcharts from "highcharts"
 import { LeaderboardItem, useAccountDeployerData } from "./useAccountDeployerData"
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import HighchartsAccessibility from 'highcharts/modules/accessibility';
+
+// Initialize the accessibility module
+HighchartsAccessibility(Highcharts);
 
 // Loading indicator component
 const LoadingIndicator = () => (
