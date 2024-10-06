@@ -5,4 +5,10 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  "plugins": [
+    "unicorn",
+  ],
+  rules: {
+    "unicorn/filename-case": "off",
+  },
 };

@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/filename-case */
 "use client";
 import { config, queryClient } from "../config";
 import { AlchemyClientState } from "@account-kit/core";

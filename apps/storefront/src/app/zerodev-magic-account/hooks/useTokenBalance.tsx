@@ -11,7 +11,7 @@ export function useTokenBalance(
 
   return useQuery({
     queryKey: ["tokenBalance", address, chainId, token],
-    queryFn: () => getTokenBalance(address!, chainId, token),
+    queryFn: () => getTokenBalance(address as `0x${string}`, chainId, token),
     enabled: !!address,
     staleTime: 30000, // Consider data stale after 30 seconds
     refetchInterval: 60000, // Refetch every 60 seconds
