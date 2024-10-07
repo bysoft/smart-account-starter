@@ -13,8 +13,8 @@ export function Header(props: React.PropsWithChildren) {
           <div className="grid grid-cols-12">
             <div className="col-span-12 text-center">
               <h2 className="text-3xl leading-none md:text-[70px] font-bold mb-6">
-                <span className="block sm:inline">Welcome to the</span>{' '}
-                <span className="block sm:inline">Smart Account Starter</span>
+                <span className="block lg:inline">Welcome to the</span>{' '}
+                <span className="block">Smart Account Starter</span>
               </h2>
               <p className="text-[22px] leading-normal opacity-80 px-12 md:px-44 lg:px-64">
                 Create a tool for your users to build smart accounts and wallets. Navigate the array of options in the evolving landscape of blockchain technology.

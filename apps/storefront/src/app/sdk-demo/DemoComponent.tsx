@@ -1,36 +1,17 @@
 'use client'
-import React, { useState } from 'react';
-import SmartAcct, { AccountProvider, SignerProvider } from '@smartacct/sdk';
+import React from 'react';
+import { zerowrap } from '@smartacct';
 
-const DemoComponent: React.FC = () => {
-  const [accountAddress, setAccountAddress] = useState<string | null>(null);
+function DemoComponent(): React.ReactElement {
 
-  const createAccount = async () => {
-    // For this example, we'll use 'zerodev' as the account provider and 'privy' as the signer provider
-    const accountProvider: AccountProvider = 'zerodev';
-    const signerProvider: SignerProvider = 'privy';
+    console.log('zerowrap', zerowrap.sum(1, 2));
+    return (
+        <div>
+            <h1>Smart Account Demo</h1>
+            <p>zerowrap.sum(1, 2) = {zerowrap.sum(1, 2)}</p>
+        </div>
+    );
+}
 
-    const signer = {
-      type: signerProvider,
-    };
-
-    const smartAcct = new SmartAcct(accountProvider, signer);
-
-    try {
-      const address = await smartAcct.createAccount();
-      setAccountAddress(address);
-    } catch (error) {
-      console.error('Error creating account:', error);
-    }
-  };
-
-  return (
-    <div>
-      <h1>Smart Account Demo</h1>
-      <button onClick={createAccount}>Create Account</button>
-      {accountAddress && <p>Account created: {accountAddress}</p>}
-    </div>
-  );
-};
 
 export default DemoComponent;

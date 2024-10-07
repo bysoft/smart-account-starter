@@ -3,6 +3,7 @@ import { createPimlicoAccount } from './pimlico';
 import { createBiconomyAccount } from './biconomy';
 import { createThirdwebAccount } from './thirdweb';
 import { createAlchemyAccount } from './alchemy';
+import { Hex } from 'viem';
 
 // Export these types so they can be used by consumers of the SDK
 export type AccountProvider = 'zerodev' | 'pimlico' | 'biconomy' | 'thirdweb' | 'alchemy';
@@ -10,6 +11,8 @@ export type SignerProvider = 'privy' | 'dynamic' | 'magic' | 'capsule';
 
 export interface Signer {
   type: SignerProvider;
+  privateKey: Hex;
+
   // Add any necessary properties or methods for the signer
 }
 
